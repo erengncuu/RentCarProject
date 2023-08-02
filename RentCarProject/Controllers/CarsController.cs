@@ -7,10 +7,11 @@ namespace RentCarProject.Controllers
 	public class CarsController : Controller
 	{
 		CarsRepostories CarsRepostories = new CarsRepostories();
+		Context c = new Context();
 		public IActionResult Index()
 		{
 			
-			return View();
+			return View(CarsRepostories.TList());
 		}
 
 		public IActionResult AddCar()

@@ -1,21 +1,23 @@
-﻿ @model IList<RentCarProject.Models.Cars>
+﻿@model IList<RentCarProject.Models.Cars>
 
 
 
 
-     <h2>Admin Car List</h2>
+<h2>Admin Car List</h2>
 
-     <table class="table table-bordered">
-         <tr>
-             <td>Car ID</td>
-             <td>Car Mark</td>
-             <td>Car Model</td>
-             <td>Model Year</td>
-             <td>Price</td>
-         </tr>
-     </table>
-@foreach (var car in Model)
-{
+<table class="table table-bordered">
+    <tr>
+        <td>Car ID</td>
+        <td>Car Mark</td>
+        <td>Car Model</td>
+        <td>Model Year</td>
+        <td>Price</td>
+        <td>Delete</td>
+        <td>Update</td>
+    </tr>
+
+    @foreach (var car in Model)
+    {
         <tr>
             <td>@car.id</td>
             <td>@car.CarMark</td>
@@ -25,4 +27,5 @@
             <td><a asp-controller="CarsController" asp-action="DeleteCar" class="btn btn-danger">Delete</a></td>
             <td><a asp-controller="CarsController" asp-action="" class="btn btn-success">Update</a></td>
         </tr>
-}
+    }
+</table>
