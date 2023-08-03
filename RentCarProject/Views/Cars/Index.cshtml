@@ -24,8 +24,11 @@
             <td>@car.CarModel</td>
             <td>@car.ModelYear</td>
             <td>@car.Price</td>
-            <td><a asp-controller="CarsController" asp-action="DeleteCar" class="btn btn-danger">Delete</a></td>
-            <td><a asp-controller="CarsController" asp-action="" class="btn btn-success">Update</a></td>
+            <td><a asp-controller="Cars" asp-action="DeleteCar" asp-route-id="@car.id" class="btn btn-danger">Delete</a></td>
+            <td><a asp-controller="Cars" asp-action="GetCar" asp-route-id="@car.id" class="btn btn-success">Update</a></td>
         </tr>
     }
 </table>
+
+<br /> 
+<a class="btn btn-info" asp-controller="Cars" asp-action="AddCar">Add Car</a>

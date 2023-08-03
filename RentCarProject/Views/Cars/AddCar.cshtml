@@ -1,21 +1,29 @@
 ﻿@model RentCarProject.Models.Cars
-Update Car
 
+<h2>Admin Car Add page</h2>
 <br />
-@using (Html.BeginForm("UpdateCar", "Cars", FormMethod.Post))
+@using (Html.BeginForm("AddCar", "Cars", FormMethod.Post))
 {
-    <br />
-    <b>Car Mark</b>
+    <b>Car mark</b>
     @Html.TextBoxFor(x => x.CarMark, new { @class = "form-control" })
+
     <br />
+
     <b>Car Model</b>
     @Html.TextBoxFor(x => x.CarModel, new { @class = "form-control" })
+
     <br />
-    <b>Car Model year</b>
+
+    <b>Car Model Year</b>
     @Html.TextBoxFor(x => x.ModelYear, new { @class = "form-control" })
+
     <br />
-    <b>Car Price</b>
+
+    <b>Car Model Year</b>
     @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
+
     <br />
-    <button class="btn btn-warning">Update</button>
+    <button class="btn btn-primary">save</button>
+
+
 }

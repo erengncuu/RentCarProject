@@ -1,4 +1,6 @@
-﻿namespace RentCarProject.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace RentCarProject.Models
 {
 	public class Cars
 	{
