@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using RentCarProject.Models;
 using RentCarProject.Repostories;
 
@@ -10,7 +11,7 @@ namespace RentCarProject.Controllers
 		Context c = new Context();
 		public IActionResult Index()
 		{
-			
+
 			return View(CarsRepostories.TList());
 		}
 		[HttpGet]
@@ -36,9 +37,9 @@ namespace RentCarProject.Controllers
 			Cars cr = new Cars()
 			{
 				CarMark = x.CarMark,
-				CarModel= x.CarModel,
-				ModelYear=x.ModelYear,
-				Price=x.Price,
+				CarModel = x.CarModel,
+				ModelYear = x.ModelYear,
+				Price = x.Price,
 			};
 			return View(x);
 		}
